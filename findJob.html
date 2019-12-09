@@ -14,18 +14,7 @@
     <script type='text/javascript' src="lib/fastclick.js"></script>
     <script type='text/javascript' src="js/jquery-weui.js"></script>
     <script type='text/javascript' src='js/swiper.js'></script>
-    <style>
-        .swiper-container {
-            width: 100%;
-            height: 10rem;
-        }
 
-        .swiper-container img {
-            display: block;
-            width: 100%;
-            height: 10rem;
-        }
-    </style>
 </head>
 
 <body ontouchstart>
@@ -46,13 +35,14 @@
             </div>
             <div class="title">
                 <div class="title_left">
-<img src="images/icon_message.png"  style="width: 20px;height: 20px">
+                    <img src="images/icon_message.png" class="title_icon">
                 </div>
                 <div class="title_center">
-<input width="">
+                    <input type="text" class="search_input" placeholder="请输入搜索词"/>
+                    <img src="images/icon_search.png" class="search_icon"/>
                 </div>
                 <div class="title_right">
-                    <img src="images/icon_scan_code.png.png" style="width: 20px;height: 20px">
+                    <img src="images/icon_scan_code.png" class="title_icon">
 
                 </div>
             </div>
