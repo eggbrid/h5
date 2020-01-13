@@ -7,72 +7,93 @@ body, html {
 }
 
 .top {
-    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .title {
     text-align: center;
     position: absolute;
-    width: 90%;
-    padding: 5%;
+    width: 100%;
+    margin-top: 0.2rem;
 
 }
 
 .title_left {
+    width: 14%;
     float: left;
-    width: 10%;
     text-align: center;
+    height: 0.6rem;
+
 }
 
 .title_center {
     float: left;
-    width: 75%;
-    float: left;
+    width: 70%;
     display: inline;
-    border-radius: 28px;
-    height: 30px;
+    border-radius: 0.3rem;
     background: #FEFFFE;
     border: 1px solid #ccc;//设置边框
 
 }
 .title_icon{
-    width: 30px;
-    float: left;
-
-    height: 30px;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-top: 0.1rem;
 }
 .search_input {
     width: 80%;
     float: left;
     display: inline;
-    height: 30px;
+    height: 0.6rem;
     background: #000000;
     opacity: 0;
-    line-height: 28px \9;
+    line-height: 28px;
 }
 .search_icon {
-    width: 24px;
-    height: 24px;
+    width: 0.29rem;
+    height: 0.29rem;
     float: right;
-    display: inline;
-    padding: 3px;
+    display: inline-block;
+    margin-top: -0.145rem;
+    position: absolute;
+    top: 50%;
+
     margin-right: 5px;
 }
 .title_right {
-    float: right;
-    width: 10%;
+    float: left;
     text-align: center;
+    width: 14%;
+    height: 0.6rem;
 }
 
 .swiper-container {
     position: absolute;
     z-index: -1;
-    height: 150px;
+    height: 2.8rem;
     width: 100%;
 }
 
 .swiper-container img {
     display: block;
     width: 100%;
-    height: 150px;
+    height: 2.8rem;
 }
+.top_icon{
+    width: 0.98rem;
+    height: 0.98rem;
+    margin-bottom: 0.25rem;
+    vertical-align:middle;
+
+}
+.top_icon_text{
+    font-size: 0.24rem;
+    color: #303133;
+    vertical-align:middle;
+
+}
+.weui-flex__item{
+    text-align: center;
+}
+
