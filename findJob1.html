@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery WeUI</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/findJob.css">
+    <script type='text/javascript' src="lib/jquery-2.1.4.js"></script>
+    <script type='text/javascript' src="lib/fastclick.js"></script>
+    <script type='text/javascript' src="js/jquery-weui.js"></script>
+    <script type='text/javascript' src='js/swiper.js'></script>
+    <script type='text/javascript' src='js/comment.js'></script>
+
+</head>
+
+<body>
+
+<div class="weui-tab">
+    <div id="all_content">
+        <div class="weui-pull-to-refresh__layer">
+            <div class='weui-pull-to-refresh__arrow'></div>
+            <div class='weui-pull-to-refresh__preloader'></div>
+            <div class="down">下拉刷新</div>
+            <div class="up">释放刷新</div>
+            <div class="refresh">正在刷新</div>
+        </div>
+
+
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="demo_image/demo_banner.png"/></div>
+                <div class="swiper-slide"><img src="demo_image/demo_banner.png"/></div>
+                <div class="swiper-slide"><img src="demo_image/demo_banner.png"/></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="title">
+            <div class="title_left">
+                <img src="images/icon_message.png" class="title_icon">
+            </div>
+            <div class="title_center">
+                <input type="text" class="search_input" placeholder="请输入搜索词"/>
+                <img src="images/icon_search.png" class="search_icon"/>
+            </div>
+            <div class="title_right">
+                <img src="images/icon_scan_code.png" class="title_icon">
+
+            </div>
+        </div>
+
+        <div class="weui-flex">
+            <div class="weui-flex__item">
+                <img class="top_icon" src="images/icon_broker.png" alt="">
+                <p class="weui-grid__label top_icon_text">
+                    经纪人
+                </p>
+            </div>
+            <div class="weui-flex__item">
+                <img class="top_icon" src="images/icon_broker.png" alt="">
+                <p class="weui-grid__label top_icon_text">
+                    经纪人
+                </p>
+            </div>
+            <div class="weui-flex__item">
+                <img class="top_icon" src="images/icon_broker.png" alt="">
+                <p class="weui-grid__label top_icon_text">
+                    经纪人
+                </p>
+            </div>
+            <div class="weui-flex__item">
+                <img class="top_icon" src="images/icon_broker.png" alt="">
+                <p class="weui-grid__label top_icon_text">
+                    经纪人
+                </p>
+            </div>
+            <div class="weui-flex__item">
+                <img class="top_icon" src="images/icon_broker.png" alt="">
+                <p class="weui-grid__label top_icon_text">
+                    经纪人
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="weui-tabbar">
+        <a href="#" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon">
+                <img src="./images/find_job_on.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">找工作</p>
+        </a>
+        <a href="serverCenter.html" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./images/server_center.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">服务中心</p>
+        </a>
+        <a href="userCenter.html" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./images/user_center.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">个人中心</p>
+        </a>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+    });
+    $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+    $("#all_content").pullToRefresh("pull-to-refresh",function () {
+// 下拉刷新触发时执行的操作放这里。
+// 从 v1.1.2 版本才支持回调函数，之前的版本只能通过事件监听
+    });</script>
+
+</body>
+</html>
