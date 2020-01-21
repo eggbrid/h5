@@ -1,61 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-  <title>jQuery WeUI</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>个人中心</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_816809_us66eg4vj2.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/customMessage.css">
+    <style>
+        .item-content .item-inner .item-title {
+            color: #282828;
+        }
 
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+        .bind-job span,
+        .bind-subsidy span {
+            position: absolute;
+            right: 1rem;
+            top: .1rem;
+            width: .4rem;
+            height: .4rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: rgb(255, 59, 48);
+        }
 
-  <link rel="stylesheet" href="css/weui.css">
-  <link rel="stylesheet" href="css/jquery-weui.css">
-  <link rel="stylesheet" href="css/demos.css">
-  <script src="lib/jquery-2.1.4.js"></script>
-  <script src="lib/fastclick.js"></script>
-  <script src="js/jquery-weui.js"></script>
+        .list-block.contacts-block {
+            margin-bottom: 3.5rem;
+        }
+    </style>
 </head>
+<body>
+<div class="page-group">
+    <div id="page-contacts-list" class="page page-current">
+        <div class="content native-scroll">
+            <div class="list-block contacts-block">
+                <div class="body-1">
+                    <div class="header-img">
+                        <div class="avatar">
+                            <a href="/getCustomInfo" class="external a-text-color avatar-img">
+                                <div class="user-img">
+                                    <img src="https://a.icons8.com/ZiOTpkVU/sqRByC/bitmap.png" width="100%">
+                                </div>
+                            </a>
+                            <div class="man-box">
+                                <p class="userName">
+                                    速立聘123
+                                </p>
+                                <p class="user-mobile">
+                                    15510102479
+                                </p>
+                            </div>
+                            <div class="my_qrCode">
+                                <a href="/myQRCode" class="my_qrCode external">
+                                    <img src="images/customMessageQRCode.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-<body ontouchstart>
+                    <div class="shortcut-btn">
+                        <div class="row">
+                            <div class="col-25 text-center">
+                                <a href="/getJobApplys" >
+                                    <img src="images/customMessageMyJob.png">
+                                    <p>我的工作</p>
+                                </a>
+                            </div>
+                            <div class="col-25 text-center">
+                                <a href="/myCardTicket" >
+                                    <img src="images/icon-my-card-ticket.png">
+                                    <p>我的卡券</p>
+                                </a>
+                            </div>
+                            <div class="col-25 text-center">
+                                <a href="/goSubsidy" >
+                                    <img src="images/customMessageMySubsidy.png">
+                                    <p>我的补贴</p>
+                                </a>
+                            </div>
+                            <div class="col-25 text-center">
+                                <a href="/myMediation">
+                                    <img src="images/wodemendian.png">
+                                    <p>我的门店</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<div class="weui-tab">
-  <div class="weui-tab__bd">
+                <div class="wallet-group">
+                    <div class="wallet-content">
+                        <div class="wallet-container">
+                            <div class="wallet-item-wraaper" onclick="goCashOut();">
+                                <span class="amount">0.00</span>
+                                <span class="hint">
+                                    钱包余额
+                                    <i class="icon icon-right nz-icon-right"></i>
+                                </span>
+                            </div>
+                            <div class="wallet-item-wraaper">
+                                <span class="amount hint-disable">0</span>
+                                <span class="hint hint-disable">已欠款</span>
+                            </div>
+                            <div class="wallet-item-wraaper">
+                                <span class="amount hint-disable">0</span>
+                                <span class="hint hint-disable">已借支</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
+                <div class="list-group list-user">
+                    <ul>
+                        <li>
+                            <a href="/realname" class="external a-text-color">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <i class="icon-realname"></i>
+                                        <div class="item-title">实名制认证</div>
+                                        <span class="icon icon-right"></span>
+                                        <span class="red-badge"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/goBindBankCard" class="external a-text-color">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <i class="icon-bank"></i>
+                                        <div class="item-title bind-subsidy-card">绑定补贴卡</div>
+                                        <span class="icon icon-right"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/toMyRefer" class="external a-text-color">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <i class="icon-recm"></i>
+                                        <div class="item-title bind-subsidy-card">我的推荐</div>
+                                        <span class="icon icon-right"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/getCustomerFollowJobList" class="external a-text-color">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <i class="icon-follow"></i>
+                                        <div class="item-title bind-subsidy-card">我的关注</div>
+                                        <span class="icon icon-right"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/setting" class="external a-text-color">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <i class="icon-settings2"></i>
+                                        <div class="item-title">设置</div>
+                                        <span class="icon icon-right"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-  <div class="weui-tabbar">
-    <a href="findJob.html" class="weui-tabbar__item">
-      <div class="weui-tabbar__icon">
-        <img src="./images/find_job.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">找工作</p>
-    </a>
-    <a href="serverCenter.html" class="weui-tabbar__item">
-      <div class="weui-tabbar__icon">
-        <img src="./images/server_center.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">服务中心</p>
-    </a>
-    <a href="#" class="weui-tabbar__item weui-bar__item--on">
-      <div class="weui-tabbar__icon">
-        <img src="./images/user_center_on.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">个人中心</p>
-    </a>
-  </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bar bar-tab" style="z-index:9998" id="nav">
+        <a id="nzjob-home" class="tab-item external tab-icon " href="index.html">
+            <span class="icon  icon-font icon-homepage"></span>
+            <span class="tab-label">找工作</span>
+        </a>
+        <a id="service-center" class="tab-item external tab-icon " href="serverCenter.html">
+            <span class="icon iconfont icon-service"></span>
+            <span class="tab-label">服务中心</span>
+        </a>
+        <a id="user" class="tab-item external tab-icon active" href="#">
+            <span class="icon iconfont icon-user-info"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </nav>
+    <script src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script src="js/tips.js"></script>
+    <script src="js/webTrafficaStatistics.js"></script>
+    <script src="js/autoEjectBindMobile.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/wechat-share.js"></script>
 </div>
-
-
-
-<script>
-    $(function() {
-        FastClick.attach(document.body);
-    });
-
-</script>
-
-<script>
-</script>
 </body>
 </html>

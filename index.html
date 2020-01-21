@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>速立聘首页</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="SAMW,HKX">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_816809_f8ojixb913b.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/refresh.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+<div class="page-group">
+    <div class="page page-current" id="page-index">
+        <div id="listContent" class="content infinite-scroll infinite-scroll-bottom" data-distance="50">
+            <div id="listSearch" class="bar bar-header-secondary">
+                <a href="/messageList" class="searchbar index-bar-notice external">
+                    <img src="images/icon_message.png"/>
+                </a>
+                <div class="searchbar searchbar-active">
+                    <div class="search-input">
+                        <label class="icon icon-search"></label>
+                        <a class="external" onclick="focusSearch()">搜索岗位名称或关键字</a>
+                    </div>
+                </div>
+
+                <a href="/login?url=%2FmyQrcode" class="searchbar index-bar-qrcode external">
+                    <img src="images/icon_scan_code.png"/>
+                </a>
+            </div>
+            <input type="hidden" value="566" id="totalElements">
+            <div id="container" class="index-item-list scroller">
+                <div class="loading">下拉刷新数据···</div>
+                <div class="top-container">
+                    <div class="banner">
+                        <div class="swiper-container" data-space-between='10'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a onclick="javascript:location.href = ''">
+                                        <img src="https://cos.niuzhigongzuo.com/banner/b744c438-5003-4ce3-9546-288b3387ac95-1579515281188.jpg"
+                                             width="100%">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a onclick="javascript:location.href = ''">
+                                        <img src="https://cos.niuzhigongzuo.com/banner/b744c438-5003-4ce3-9546-288b3387ac95-1579515281188.jpg"
+                                             width="100%">
+                                    </a>
+                                </div>  <div class="swiper-slide">
+                                <a onclick="javascript:location.href = ''">
+                                    <img src="https://cos.niuzhigongzuo.com/banner/b744c438-5003-4ce3-9546-288b3387ac95-1579515281188.jpg"
+                                         width="100%">
+                                </a>
+                            </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="index-dynamic">
+                        <div class="index-dynamic-image">
+                            <img src="images/img_dt.png"/>
+                        </div>
+                        <div class="index-dynamic-text"></div>
+                    </div>
+
+                    <div class="shortcuts">
+                        <a href="/toMyQuestion" class="shortcuts-elements external">
+                            <img src="images/icon_broker.png">
+                            <span class="shortcuts-span">经纪人</span>
+                            <span class="my-answer-tips nz-hide"></span>
+                        </a>
+                        <a href="/getJobApplys" class="shortcuts-elements external ">
+                            <img src="images/icon_my_job.png">
+                            <span class="shortcuts-span">我的工作</span>
+                        </a>
+                        <a href="/mediationJob" class="shortcuts-elements external">
+                            <img src="images/icon_store_job.png">
+                            <span class="shortcuts-span">门店岗位</span>
+                        </a>
+                        <a href="/goReferFriend?loginImg=loginImg_steward_recommend"
+                           class="shortcuts-elements external">
+                            <img src="images/icon_recommended_prizes .png">
+                            <span class="shortcuts-span">推荐有奖</span>
+                        </a>
+                        <a href="/luckDraw" class="shortcuts-elements external">
+                            <img src="images/icon_day_coupon.png">
+                            <span class="shortcuts-span">每日抢券</span>
+                            <span class="grab-badge">每日抢</span>
+                        </a>
+                    </div>
+
+
+                    <div class="index-job-classify">
+                        <a class="classify-item hot external" href="/jobList?classify=applyJob">
+                            <div class="classify-title">
+                                <img src="images/ic_pingjia.png"/>
+                                <span>人气岗位</span>
+                            </div>
+                            <div class="classify-description">报名最多的岗位</div>
+                        </a>
+                        <a class="classify-item new external" href="/jobList?classify=newJob">
+                            <div class="classify-title">
+                                <img src="images/ic_zuixin.png"/>
+                                <span>最新岗位</span>
+                            </div>
+                            <div class="classify-description">最新发布的岗位</div>
+                        </a>
+                        <a class="classify-item height-rate  external" href="/jobList?classify=rateJob">
+                            <div class="classify-title">
+                                <img src="images/ic_renqi.png"/>
+                                <span>热评岗位</span>
+                            </div>
+                            <div class="classify-description">评价最高的岗位</div>
+                        </a>
+                    </div>
+
+
+                    <a class="external cash-luck-draw-banner" href="/cash/luckDraw">
+                        <img src="images/img_meirichougongbao.png"/>
+                    </a>
+
+                    <ul class="index-items" id="index-joblist">
+                        <div class="item-list-head">
+                            <img src="images/ic_remengangwei.png">
+                        </div>
+                        <!--默认写一个，同js加载-->
+                        <li>
+                            <a href="javascript:void (0);" onclick="getJobDetails(1584)"
+                               class="item-link external item-content">
+                                <div class="item-image">
+                                    <img src="https://cos.niuzhigongzuo.com/company/6b9e8c5d-720d-4cf3-8dde-76c9f132f9d8-1566284861951.jpg"
+                                         width="100%"></div>
+                                <div class="item-inner noneImges">
+                                    <div class="item-price-row">
+                                        <p class="item-number index-item-title text-filter" title="昆山龙腾小时工">
+                                            昆山龙腾小时工
+                                        </p>
+                                    </div>
+                                    <p class="index-item-subtitle">
+                                        <span> 1月22号截止面试</span>
+                                    </p>
+                                    <div class="item-price-row">
+                                        <p class="price-price"><span>5500-7000</span> 元/月</p>
+                                    </div>
+                                    <div class="item-amount">
+                                        <p class=" hot-mark ">
+                                            工价
+                                        </p>
+                                        <p>25元/小时</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader">
+                    </div>
+                </div>
+                <div id="reload-list">
+                    <span id="reload-list-btn">点击刷新列表</span>
+                    <span id="icon-close"></span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bar bar-tab" style="z-index:9998" id="nav">
+            <a id="nzjob-home" class="tab-item external tab-icon active" href="#">
+                <span class="icon  icon-font icon-homepage"></span>
+                <span class="tab-label">找工作</span>
+            </a>
+            <a id="back-top" class="tab-item external tab-icon" style="display: none;">
+                <span class="icon icon-back-top"></span>
+                <span class="tab-label" style="color: #0894ec;">返回顶部</span>
+            </a>
+            <a id="service-center" class="tab-item external tab-icon " href="serverCenter.html">
+                <span class="icon iconfont icon-service"></span>
+                <span class="tab-label">服务中心</span>
+            </a>
+            <a id="user" class="tab-item external tab-icon " href="userCenter.html">
+                <span class="icon iconfont icon-user-info"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="page" id="page-search">
+        <header class="bar bar-nav">
+            <div class="title">
+                <div class="search-input col-80" style="margin-left: 0;">
+                    <label class="icon icon-search" for="search"></label>
+                    <input type="search" id="search" name="query" placeholder='搜索岗位名称、关键字、特殊要求 ...' autocomplete="off"/>
+                </div>
+                <a class="searchbar-cancel external" onclick="cancelSearch()">取消</a>
+            </div>
+        </header>
+        <div class="content infinite-scroll infinite-scroll-bottom" data-distance="50"
+             style="top:2.2rem; bottom: 2.5rem;">
+            <div class="infinite-scroll-preloader" style="display: none;">
+                <div class="preloader"></div>
+            </div>
+            <div id="tag-list">
+                <p>热门标签</p>
+                <ul class="tag-list-items">
+                    <li data-tag-id="3" data-tag-text="长白班">长白班</li>
+                    <li data-tag-id="50" data-tag-text="不体检">不体检</li>
+                    <li data-tag-id="70" data-tag-text="非流水线">非流水线</li>
+                    <li data-tag-id="96" data-tag-text="不查纹身烟疤">不查纹身烟疤</li>
+                    <li data-tag-id="102" data-tag-text="吃住在厂">吃住在厂</li>
+                    <li data-tag-id="132" data-tag-text="大龄工">大龄工</li>
+                    <li data-tag-id="169" data-tag-text="坐班多">坐班多</li>
+                    <li data-tag-id="170" data-tag-text="工时高">工时高</li>
+                    <li data-tag-id="171" data-tag-text="不穿无尘服">不穿无尘服</li>
+                    <li data-tag-id="199" data-tag-text="不查案底">不查案底</li>
+                    <li data-tag-id="208" data-tag-text="临时证件">临时证件</li>
+                    <li data-tag-id="213" data-tag-text="不过安检">不过安检</li>
+                    <li data-tag-id="244" data-tag-text="不查字母">不查字母</li>
+                </ul>
+            </div>
+            <div class="index-item-list">
+                <ul class="index-items"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script src="js/zepto.fx.js"></script>
+    <script src="js/zepto-adapter.js"></script>
+    <script src="js/sui-modal.js"></script>
+    <script src="js/tips.js"></script>
+    <script src="//gate.myapp.ltd/cdn/jsbridge-mini.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/oojs.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/freeConsultation.js"></script>
+    <script src="js/webTrafficaStatistics.js"></script>
+    <script src="css/swiper/swiper-4.2.6.min.js"></script>
+    <script src="js/search.js"></script>
+
+    <script>
+        _hmt.push(['_trackEvent', 'index#scanCustomerQrCode', 'view', '扫用户推荐码进来']);
+        if (jsBridge.inApp) {
+            // 在App中
+            $('#refer-ad').css('display', 'none')
+        }
+
+        function goLuckDraw() {
+            window.location.href = '/luckDraw';
+        }
+
+        function goNPP() {
+            var customer = $("#customer").val();
+            if (customer == null || customer == undefined || customer == "") {
+                window.location.href = "/login";
+            } else {
+                window.location.href = "/packageRecordDetail";
+            }
+        }
+
+        function goLogin() {
+            window.location.href = "/login";
+        }
+
+        function focusSearch() {
+            window.preventEjectMpQrcode = true;
+            window.preventEjectBindMobile = true;
+            window.preventIndexPopout = true;
+            $('#eject-mp-qrcode').css('display', 'none');
+            $('#page-index').removeClass('page-current');
+            $('#page-search').addClass('page-current');
+            var elem = document.getElementById('search');
+            elem.focus();
+        }
+
+        function cancelSearch() {
+            var elem = document.getElementById('search');
+            elem.blur();
+            window.preventEjectMpQrcode = false;
+            window.preventEjectBindMobile = false;
+            window.preventIndexPopout = false;
+            $('#page-search').removeClass('page-current');
+            $('#page-index').addClass('page-current');
+        }
+    </script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/wechat-share.js"></script>
+    <script src="js/autoEjectBindMobile.js"></script>
+    <script src="js/autoEjectMpQrcode.js"></script>
+</div>
+</body>
+</html>

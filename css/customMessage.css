@@ -1,0 +1,359 @@
+.avatar .avatar-img {
+    align-self: center;
+}
+
+.avatar .man-box {
+    margin-left: .5rem;
+}
+
+.man-box .userName, .man-box .user-mobile {
+    font-size: .76rem;
+    color: #333;
+    margin: .2rem 0;
+}
+
+.avatar .my_qrCode {
+    margin: 0 .8rem 0 auto;
+    align-self: center;
+    color: #000;
+}
+
+.avatar .my_qrCode .code-btn {
+    display: block;
+    padding: 5px 10px;
+}
+
+.list-block {
+    margin: 0;
+}
+
+.list-block .list-user .item-title {
+    color: #333333;
+}
+
+.list-block .item-title {
+    overflow: visible;
+}
+
+.bind-subsidy-card {
+    position: relative;
+}
+
+.bind-subsidy-card span, .bind-subsidy span, .bind-job span {
+    position: absolute;
+    right: -5px;
+    top: 4px;
+    width: .3rem;
+    height: .3rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(255, 59, 48);
+}
+
+.bind-subsidy-card span {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-size: .5rem;
+}
+
+.bind-subsidy-card span:after {
+    content: '1';
+    color: #FFF;
+}
+
+.list-block ul:before {
+    height: 0;
+}
+
+.list-user {
+    margin-bottom: .25rem;
+}
+
+/* 个人中心 图标列表 */
+.content .iconfont {
+    margin-right: 8px;
+    font-size: .8rem;
+    color: #0894EC;
+    font-weight: bold;
+}
+
+.content .icon-settings {
+    margin-right: 8px;
+    font-size: .67rem;
+    color: #0894EC;
+    font-weight: bold;
+    margin-top: -3px;
+}
+
+.content .iconfont.icon-mendian:before {
+    font-size: .7rem;
+}
+
+.iconfont.icon-yinxingqia-copy {
+    font-size: .65rem;
+    margin-right: 10px;
+}
+
+/*********************************************** V2.0 UI ***********************************************/
+.page {
+    background-color: #fff;
+}
+
+/* 第一部分 - 个人信息 */
+.body-1 {
+    position: relative;
+    height: 9rem;
+    background-image: url("../images/me/bg-me-top.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+
+}
+
+.header-img {
+
+    overflow: hidden;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    overflow: unset;
+    top: 1rem;
+    z-index: 20;
+}
+
+.header-img .avatar {
+    display: flex;
+    height: 5.2rem;
+    margin: 0 .675rem 0 .675rem;
+}
+
+.avatar .my_qrCode .iconfont {
+    color: rgba(0, 0, 0, .65);
+    font-size: 1.2rem;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+.avatar .my_qrCode {
+    margin: 0 0 0 auto;
+}
+
+.avatar .my_qrCode img {
+    width: .95rem;
+    height: .95rem;
+}
+
+.avatar .user-img {
+    overflow: hidden;
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    border: .1rem solid #ffffff;
+    box-shadow: 0 2px 5px 2px rgba(0, 77, 194, .1);
+}
+
+.avatar .user-img img {
+    display: block;
+    border-radius: 50%;
+}
+
+.man-box {
+    padding: .37rem 0;
+    align-self: center;
+    margin-left: .6rem;
+}
+
+.man-box .userName {
+    font-size: .85rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.man-box .user-mobile {
+    font-size: .75rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* 第二部分 快捷入口 */
+.shortcut-btn {
+    padding-top: .3rem;
+    position: absolute;
+    margin: 0 auto;
+    width: 95%;
+    margin-left: 2.5%;
+    bottom: 0;
+    background: #fff;
+    height: 3.2rem;
+    border-radius: .25rem;
+}
+
+.shortcut-btn img {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.shortcut-btn p {
+    margin: .3rem 0 .9rem 0;
+    padding: 0;
+    font-size: .65rem;
+    color: #282828;
+}
+
+/* 第三部分 其他列表 */
+.list-user {
+    margin-bottom: 0;
+    background: #f4f4f4;
+    padding-top: .4rem;
+    /*padding-bottom: .4rem;*/
+}
+
+.list-block ul {
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.list-block .item-inner {
+    font-size: .7rem;
+    border-bottom: none;
+}
+
+.item-content {
+    height: 2.7rem;
+    padding-left: .675rem;
+    padding-right: .675rem;
+}
+
+.item-content .item-inner {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.item-content .item-inner .item-title {
+    font-size: .7rem;
+    color: #898989;
+}
+
+.a-text-color .icon-right {
+    color: #898989;
+}
+
+.a-text-color .pull-right {
+    color: #898989;
+    font-size: .6rem;
+    margin-left: auto;
+}
+
+.icon-realname, .icon-bank, .icon-settings2, .icon-recm, .icon-follow {
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+    margin-right: .6rem;
+}
+
+.icon-realname {
+    background: url("../images/shenfenyanzheng.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-bank {
+    background: url("../images/wodebutieyinghangka.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-recm {
+    background: url("../images/recm.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-follow {
+    background: url("../images/icon-my-follow-job.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-settings2 {
+    background: url("../images/shezhi.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.red-badge {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #f74f53;
+    position: absolute;
+    right: 0.8rem;
+    border-radius: 50%;
+}
+
+.shortcut-btn .row .col-25 {
+    position: relative;
+}
+
+.shortcut-btn .row .col-25 img {
+}
+.shortcut-btn .row .col-25 p {
+    margin-top: 0;
+}
+.wallet-group {
+    margin-bottom: 0;
+    background: #f4f4f4;
+    padding-top: .4rem;
+}
+
+.wallet-content {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .75rem .75rem;
+}
+
+.wallet-content img {
+    width: 2.2rem;
+}
+
+.wallet-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.wallet-item-wraaper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.amount {
+    color: #3A7EFF;
+    font-size: .9rem;
+    padding: .2rem 0;
+    font-weight: bold;
+}
+
+.hint {
+    color: #666;
+    font-size: .65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hint-disable {
+    color: #999;
+}
+
+.nz-icon-right {
+    font-size: .55rem;
+    margin-left: .1rem;
+}

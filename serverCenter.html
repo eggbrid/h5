@@ -1,63 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-  <title>jQuery WeUI</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-
-  <link rel="stylesheet" href="css/weui.css">
-  <link rel="stylesheet" href="css/jquery-weui.css">
-  <link rel="stylesheet" href="css/demos.css">
-  <script src="lib/jquery-2.1.4.js"></script>
-  <script src="lib/fastclick.js"></script>
-  <script src="js/jquery-weui.js"></script>
+    <meta charset="utf-8">
+    <title>服务中心</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_816809_us66eg4vj2.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <link rel="stylesheet" href="css/service.css">
 </head>
-
-<body ontouchstart>
-
-<div class="weui-tab">
-  <div class="weui-tab__bd">
+<body>
 
 
+<div class="page-group">
+    <div id="page-contacts-list" class="page page-current">
+        <div class="content native-scroll">
+            <div class="top-container">
+                <div class="service-mediation">
+                    <div class="mediation-title">
+                        <div class="my-mediation">
+                            <div class="service-line"></div>
+                            我的服务门店
+                        </div>
+                    </div>
+                    <div class="mediation-info">
+                        <div class="mediation-head">
+                            <img src="https://a.icons8.com/ZiOTpkVU/LcKWD3/bitmap.png" alt="">
+                        </div>
+                        <div class="mediation-text">
+                            <div class="mediation-name go-my-service-mediation">
+                                <span>速立聘工作站</span>
+                                <img src="images/arrow-right.png" alt="">
+                            </div>
+                            <div class="mediation-concat">
+                                18111870161
+                            </div>
+                        </div>
+                        <div class="mediation-rate">
+                            <div class="mediation-rate-wrapper">
+                                <input type="hidden" id="mediation-score" value="44">
+                                <div class="mediation-rate-show nz-visibility-hidden">
+                                    <span class="mediation-rate-title">评分</span>
+                                    <div class="img"></div>
+                                    <div class="img"></div>
+                                    <div class="img"></div>
+                                    <div class="img"></div>
+                                    <div class="img"></div>
+                                    <span class="mediation-rate-score"></span>
+                                </div>
+                            </div>
+                        </div>
 
-  </div>
+                    </div>
+                    <div class="mediation-serve">
+                        <div>
+                            <div class="serve-number">0</div>
+                            <div class="serve-title">服务我入职(次)</div>
+                        </div>
+                        <div>
+                            <div class="serve-number">0</div>
+                            <div class="serve-title">服务我发车(次)</div>
+                        </div>
+                        <div>
+                            <div class="serve-number">2</div>
+                            <div class="serve-title">跟进我(次)</div>
+                        </div>
+                    </div>
+                </div>
 
-  <div class="weui-tabbar">
-    <a href="findJob.html" class="weui-tabbar__item">
-      <div class="weui-tabbar__icon">
-        <img src="./images/find_job.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">找工作</p>
-    </a>
-    <a href="#tab2" class="weui-tabbar__item weui-bar__item--on">
-      <div class="weui-tabbar__icon">
-        <img src="./images/server_center_on.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">服务中心</p>
-    </a>
-    <a href="userCenter.html" class="weui-tabbar__item">
-      <div class="weui-tabbar__icon">
-        <img src="./images/user_center.png" alt="">
-      </div>
-      <p class="weui-tabbar__label">个人中心</p>
-    </a>
-  </div>
+                <div class="apply-active">
+                    <div class="mediation-title">
+                        <div class="my-mediation">
+                            <div class="service-line"></div>
+                            进行中的岗位
+                        </div>
+                    </div>
+                    <div class="index-item-list">
+                        <ul class="index-items">
+                            <li>
+                                <div class="mediation-info">
+                                    <div class="mediation-head">
+                                        <img src="https://a.icons8.com/ZiOTpkVU/LcKWD3/bitmap.png" alt="">
+                                    </div>
+                                    <div class="mediation-text">
+                                        <div class="mediation-name go-my-service-mediation">
+                                            <span>小时工</span>
+                                            <img src="images/arrow-right.png" alt="">
+                                        </div>
+                                        <div class="mediation-concat">
+                                            18111870161
+                                        </div>
+                                    </div>
+                                    <div class="mediation-rate">
+                                        <div class="mediation-rate-wrapper">
+                                            <input type="hidden">
+                                            <div class="mediation-rate-show nz-visibility-hidden">
+                                                <span class="mediation-rate-title">评分</span>
+                                                <div class="img"></div>
+                                                <div class="img"></div>
+                                                <div class="img"></div>
+                                                <div class="img"></div>
+                                                <div class="img"></div>
+                                                <span class="mediation-rate-score"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                 <!--   <div class="no-work forbid-select">
+                        <div class="no-work-text">您还没有进行中的工作哦~</div>
+                        <a class="to-apply go-apply-job">去找工作</a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="star-item star-item-temp nz-hide">
+        <span class="star-item-title"></span>
+
+        <input type="hidden" name="rateId" value="">
+        <input type="hidden" name="rate" value="0">
+
+        <div class="img star-none" data-value="1"></div>
+        <div class="img star-none" data-value="2"></div>
+        <div class="img star-none" data-value="3"></div>
+        <div class="img star-none" data-value="4"></div>
+        <div class="img star-none" data-value="5"></div>
+        <span class="star-item-text"></span>
+    </div>
+
+    <div class="bad-layer-wrapper">
+        <div class="bad-layer">
+            <div class="bad-title">
+                <span>抱歉，本店没能给您好的体验</span>
+            </div>
+            <div class="bad-tips">
+                <p>本次您给服务门店评价为<span class="bad-tip-strong">差评</span>，是否考虑更换一个服务门店？</p>
+            </div>
+            <div class="bad-footer">
+                <div class="bad-cancel">下次再看</div>
+                <div class="bad-now-go">去换个门店</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bar bar-tab" style="z-index:9998" id="nav">
+        <a id="nzjob-home" class="tab-item external tab-icon " href="index.html">
+            <span class="icon  icon-font icon-homepage"></span>
+            <span class="tab-label">找工作</span>
+        </a>
+
+        <a id="service-center" class="tab-item external tab-icon active" href="#">
+            <span class="icon iconfont icon-service"></span>
+            <span class="tab-label">服务中心</span>
+        </a>
+        <a id="user" class="tab-item external tab-icon " href="userCenter.html">
+            <span class="icon iconfont icon-user-info"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </nav>
+
+    <script src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <!--<script src="layer/layer.js"></script>-->
+    <script src="js/oojs.js"></script>
+    <script src="js/applyOption.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/freeConsultation.js"></script>
+    <script src="js/qrcode/qrcode.js"></script>
+    <script src="js/qrcode/jquery.qrcode.js"></script>
+    <script src="js/subsidyQRCode.js"></script>
+    <script src="js/tips.js"></script>
+    <script src="js/webTrafficaStatistics.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/wechat-share.js"></script>
 </div>
-
-
-
-<script>
-    $(function() {
-        FastClick.attach(document.body);
-    });
-
-</script>
-
-<script>
-</script>
 </body>
 </html>
